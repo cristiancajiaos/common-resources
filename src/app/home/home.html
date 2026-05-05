@@ -1,1 +1,9 @@
-<p>home works!</p>
+<section class="home">
+  @for (module of modules; track module) {
+    <a [routerLink]="[module]">
+      <div class="module">
+        {{ module }}
+      </div>
+    </a>
+  }
+</section>
