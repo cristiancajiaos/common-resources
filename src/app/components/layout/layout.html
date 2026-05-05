@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top mb-3">
+	<div class="container-fluid">
+		<a class="navbar-brand" [routerLink]="'.'">
+      Common Resources
+    </a>
+
+		<button class="navbar-toggler" type="button" (click)="toggleMenuCollapse">
+      Menu
+    </button>
+
+		<div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+			<ul class="navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" [routerLink]="['posts']" (click)="isMenuCollapsed = true">
+            Posts
+          </a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
